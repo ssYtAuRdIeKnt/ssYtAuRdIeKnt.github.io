@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Перероблюю</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar_div">
+        <div class="logo logo-brown-anim">GymCycles</div>
+        <div class="navbar_items">
+          <div class="search">
+            <input type="text" placeholder="Пошук..."/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#4E342E"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+
+          <button onclick="toggleSearch()" class="toogle_button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#4E342E"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <a href="profile.html" class="profile">Профіль</a>
+        </div>
+
+      </div>
+      <div id="mobile_search" style="display: none">
+        <div>
+          <input type="text" placeholder="Пошук..." class="" />
+        </div>
+      </div>
+    </nav>
+
+    <!-- Space after navbar -->
+    <div class="space_after_navbar"></div>
+
+    <!-- Sidebar + main -->
+    <div class="content_bg">
+      <div class="content_bg_85">
+        <!-- Sidebar -->
+        <aside>
+          <!-- Mobile -->
+          <div class="burger_menu">
+            <a href="index.html" class="inactive_index_mobile">Список програм</a>
+            <button onclick="toggleSidebarMenu()">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <div id="mobile_sidebar_menu" style="display:none">
+            <div class="sidebar_container_mobile">
+              <div class="general_info_mobile">Загальна інформація</div>
+              <ul>
+                <li><a href="organization.html" class="inactive_item_sidebar_mobile">Організація тренувань</a></li>
+                <li><a href="newcomers.html" class="inactive_item_sidebar_mobile">Для новачків</a></li>
+                <li><a href="nutrition.html" class="inactive_item_sidebar_mobile">Харчування</a></li>
+                <li><a href="author.html" class="active_item_sidebar_mobile">Про автора</a></li>
+                <li><a href="coworking.html" class="inactive_item_sidebar_mobile">Співпраця з нами</a></li>
+              </ul>
+            </div>
+
+            <div class="sidebar_container_mobile">
+              <div class="cycle_types_mobile">Види циклів</div>
+              <ul>
+                <li><a href="strength.html" class="inactive_item_sidebar_mobile">Силовий</a></li>
+                <li><a href="hypertrophy.html" class="inactive_item_sidebar_mobile">Гіпертрофія</a></li>
+                <li><a href="endurance.html" class="inactive_item_sidebar_mobile">Силова витривалість</a></li>
+                <li><a href="recovery.html" class="inactive_item_sidebar_mobile">Відновлювальний</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Desktop -->
+          <div class="desktop_sidebar_menu">
+            <a href="index.html">
+              <div class="inactive_index_desktop">Список програм</div>
+            </a>
+
+            <div class="sidebar_container_desktop">
+              <div class="general_info_desktop">Загальна інформація</div>
+              <ul>
+                <li><a href="organization.html" class="inactive_item_sidebar_desktop">Організація тренувань</a></li>
+                <li><a href="newcomers.html" class="inactive_item_sidebar_desktop">Для новачків</a></li>
+                <li><a href="nutrition.html" class="inactive_item_sidebar_desktop">Харчування</a></li>
+                <li><a href="author.html" class="active_item_sidebar_desktop">Про автора</a></li>
+                <li><a href="coworking.html" class="inactive_item_sidebar_desktop">Співпраця з нами</a></li>
+              </ul>
+            </div>
+
+            <div class="sidebar_container_desktop">
+              <div class="cycle_types_desktop">Види циклів</div>
+              <ul>
+                <li><a href="strength.html" class="inactive_item_sidebar_desktop">Силовий</a></li>
+                <li><a href="hypertrophy.html" class="inactive_item_sidebar_desktop">Гіпертрофія</a></li>
+                <li><a href="endurance.html" class="inactive_item_sidebar_desktop">Силова витривалість</a></li>
+                <li><a href="recovery.html" class="inactive_item_sidebar_desktop">Відновлювальний</a></li>
+              </ul>
+            </div>
+
+            <ul class="sidebar_container_desktop">
+              <li>
+                <a href="future.html" class="inactive_item_sidebar_desktop">*Тут у майбутньому буде тематична реклама</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+      <!-- Main Content -->
+      <main class="author_main">
+        <div class="author_content">
+          <h1>Про автора</h1>
+          <img src="images/author.jpg" class="author_img_mobile" alt="Фото автора"/>
+          <img src="images/author.jpg" class="author_img_desktop" alt="Фото автора"/>
+          <div>
+            <p class="author_text">Вітаю! Мене звати Ярослав, я засновник <strong>GymCycles</strong> і фахівець у сфері силових тренувань.</p>
+            <p class="author_text">За плечима маю 8 підопічних, які під моїм наставництвом вдало спрогресували або прогресують у силових видах спорту.</p>
+            <p class="author_text">Матеріали, які знаходяться на цьому сайті, як і сам сайт, є моєю розробкою.</p>
+            <div class="author_text">
+              <p>Мої регалії в 17 років:</p>
+              <ul>
+                <li>КМС з жиму лежачи</li>
+                <li>КМС зі станової тяги</li>
+                <li>I розряд з присяду</li>
+                <li>КМС зі строгого підйому на біцепс</li>
+              </ul>
+            </div>
+            <p>З питаннями щодо циклів: <a href="mailto:yaroslav.kalinichenko@auk.edu.ua" class="mail">yaroslav.kalinichenko@auk.edu.ua</a></p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    function toggleSearch() {
+      const s = document.getElementById("mobile_search");
+      s.style.display = s.style.display === "none" || s.style.display === "" ? "block" : "none";
+    }
+    function toggleSidebarMenu() {
+      const m = document.getElementById("mobile_sidebar_menu");
+      m.style.display = m.style.display === "none" || m.style.display === "" ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
